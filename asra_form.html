@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link href="css/enteir.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+<title>応募フォーム・お問い合わせ</title>
+
+</head>
+<body>
+    <!-- アスラポートWebの全体 -->
+<div class="enteir">
+    <header>
+            <!-- ヘッダーの設定 -->
+            <p class="logo"><img src="img/asra_logo.jpg"></p>
+    </header>
+    <div id="nav-toggle">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div id="gloval-nav">
+            <nav>
+                <ul id="navigation">
+                    <li><a href="asrapport_company.html">会社概要</a></li>
+                    <li><a href="business_search.html">事業を知る</a></li>
+                    <li><a href="asrapport_keyword.html">会社を知る</a></li>
+                    <li><a href="asrapport_corporate.html">会社理念</a></li>
+                    <li><a href="asrapport_intaviwe.html">社員紹介</a></li>
+                    <li><a href="#">SVを知る</a></li>
+                    <li><a href="https://j-fla.com/ir/message/">人事担当からのメッセージ</a></li>
+                    <li><a href="recurit_mattres.html">募集事項</a></li>
+                </ul>
+            </nav>
+        
+            <div id="nav-bg-wrap">
+                <div class="nav-bg home"></div>
+                <div class="nav-bg news"></div>
+                <div class="nav-bg about"></div>
+                <div class="nav-bg works"></div>
+                <div class="nav-bg contact"></div>
+              </div>
+        </div>
+
+
+
+
+    <div id="contents">
+			<div class="contents_inner form">
+
+
+				<section class="btm20">
+					<h3 class="head01">応募・お問い合わせフォーム</h3>
+					<p class="center btm5">各種お問い合わせフォームです。必要事項をご記入の上、送信ください。</p>
+					<p class="center">その他ご質問もお気軽にご連絡くださいませ。<br>
+						<br>
+						<span class="red">必須の箇所には必ずご入力をお願いします。</span></p>
+				</section>
+
+				<form action="/contact/" method="post">
+					<input type="hidden" name="dummy" value="龜龠">
+					<input type="hidden" name="mode" value="confirm">
+					<input type="hidden" name="token" value="" />
+					<div class="form_list">
+						<ul>
+							<li>
+								<p class="title"><span class="hissu">必須</span>お名前</p>
+								<div class="data"><input type="text" name="name" class="wLL input_hissu" value=""  placeholder="山田太郎"/></div>
+							</li>
+							<li>
+								<p class="title">ふりがな</p>
+								<div class="data"><input type="text" name="kana" class="wLL" value=""  placeholder="やまだ たろう"/></div>
+							</li>
+							<li>
+								<p class="title"><span class="hissu">必須</span>メールアドレス</p>
+								<div class="data"><input type="text" name="email" class="wLL input_hissu" value="" placeholder="yamadatarou@email.com"/></div>
+							</li>
+							<li>
+                                <p class="title"><span class="hissu">必須</span>生年月日</p>
+								<div class="data"><input type="text" name="birthday" class="wLL" value="" placeholder="1984.8.6"/></div>
+                            </li>
+                            <li>
+                                <p class="title"><span class="hissu">必須</span>現在のご職業</p>
+                                <div class="data"><input type="text" name="phone" class="wLL" value=""placeholder="店長/スーパーバイザー(SV)" /></div>
+                            </li>
+                            <li>
+                                <p class="title"><span class="hissu">必須</span>電話番号</p>
+                                <div class="data"><input type="text" name="phone" class="wLL" value=""placeholder="000-0000-0000" /></div>
+                            </li>
+                            <li>
+                                <p class="title"><span class="hissu">必須</span>住所</p>
+                                <div class="data"><input type="text" name="phone" class="wLL" value=""placeholder="大阪府大阪市北区錦町○番地○棟102" /></div>
+                            </li>
+                            <li>
+                                <p class="title">職務履歴（フリー欄）</p>
+                                <div class="data"><textarea name="body" style="width:100%; min-height:100px;" class="input_hissu"></textarea></div>
+                            </li>
+                            <li>
+                                <p class="title">お問い合わせ内容</p>
+                                <div class="data"><textarea name="body" style="width:100%; min-height:100px;" class="input_hissu"></textarea></div>
+                            </li>
+						</ul>
+					</div>
+
+					<p class="center btm10">お客さまの個人情報は慎重に取り扱い、ご同意なしに第三者に提供または開示することはございません。</p>
+					<p class="btn02"><a href=#>個人情報保護方針については<br class="sp">こちらをご覧ください</a></p>
+
+					<div class="form_button">
+						<input class="confirm" type="submit" name="ok" value="同意して確認画面へ">
+					</div>
+				</form>
+			</div>
+        </div>
+        <div class="fotter_wrap">
+                <div class="logo">
+                    <p><img src="img/asra_rogo_footer.jpg"></p>
+        </div>
+        
+        <div class="fotter_link">
+                <ul>
+                    <li><h3><img src="img/about02.png"></h3></li>
+                    <li><a href="asrapport_company.html">会社概要</a></li>
+                    <li><a href="business_search.html">事業を知る</a></li>
+                    <li><a href="asrapport_keyword.html">会社を知る</a></li>
+                    <li><a href="asrapport_corporate.html">会社理念</a></li>
+                </ul>
+                <ul>
+                    <li><h3><img src="img/work.png"></h3></li>
+                    <li><a href="asrapport_intaviwe.html">社員紹介</a></li>
+                    <li><a href="#">SVを知る</a></li>
+                </ul>     
+                <ul>
+                        <li><h3><img src="img/recruit_02.png"></h3></li>
+                        <li><a href="https://j-fla.com/ir/message/">人事担当からのメッセージ</a></li>
+                        <li><a href="recurit_mattres.html">募集事項</a></li>
+                </ul>   
+            </div>  
+            <div class="copyright">Copyright © Asrapport Co.,Ltd.</div>
+  
+
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/asrapport.js"></script>
+</body>
+</html>
+

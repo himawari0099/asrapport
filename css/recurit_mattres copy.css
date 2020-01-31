@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 62.5%;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+}
+
+header img {
+  margin-top: 20px;
+}
+
+/*メニュー部分*/
+#ham-menu {
+  background-color: #fff;
+  /*メニュー背景色*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  padding: 10px 40px;
+  /*メニュー内部上下左右余白*/
+  position: fixed;
+  right: -300px;
+  /*メニュー横幅①と合わせる*/
+  top: 0;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  transition: -webkit-transform 0.3s linear 0s;
+  -o-transition: transform 0.3s linear 0s;
+  transition: transform 0.3s linear 0s;
+  transition: transform 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+  /*0.3s は変化するのにかかる時間*/
+  width: 300px;
+  /*メニュー横幅①*/
+  z-index: 1000;
+}
+
+/*メニューアイコン部分は疑似要素で*/
+#ham-menu::before {
+  background-color: #fff;
+  /*ボタン部分背景色*/
+  /* border-radius: 0 0 0 10px; 左下角丸 */
+  color: #79BB32;
+  /*アイコン（フォント）色*/
+  content: "≡";
+  /*メニューアイコン*/
+  display: block;
+  font-size: 50px;
+  /*アイコン（フォント）サイズ*/
+  height: 50px;
+  line-height: 50px;
+  /*縦位置中央化*/
+  position: absolute;
+  right: 100%;
+  text-align: center;
+  top: 0;
+  width: 50px;
+}
+
+/*透過背景部分*/
+#menu-background {
+  background-color: #333;
+  /*黒背景部分背景色*/
+  display: block;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  /*0.3s は変化するのにかかる時間*/
+  width: 100%;
+  z-index: -1;
+}
+
+/*hover 時の処理*/
+#ham-menu:hover {
+  -webkit-transform: translate(-300px);
+      -ms-transform: translate(-300px);
+          transform: translate(-300px);
+  /*メニュー横幅①と合わせる*/
+}
+
+#ham-menu:hover + #menu-background {
+  opacity: 0.5;
+  /*黒背景部分透過度*/
+  z-index: 999;
+}
+
+.main_v {
+  width: 100%;
+  height: 100%;
+}
+
+.main_v .main_wrap {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 65px;
+  padding-left: 230px;
+  background: url(../img/bk_main.jpg) no-repeat;
+}
+
+.main_v .main_wrap img {
+  margin: 0 auto;
+  display: block;
+}
+
+.main_v .main_text {
+  margin-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_v .main_text h2 {
+  font-size: 15px;
+  color: #fff;
+}
+
+.main_v .main_text p {
+  margin-left: 30px;
+  font-size: 15px;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .main_v .main_wrap {
+    padding-left: 0;
+  }
+}
+
+.recuitment_information {
+  width: 100%;
+  height: 100%;
+  margin-top: 190px;
+}
+
+.recuitment_information .info_recuitment_txt {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 10px;
+  margin-bottom: 90px;
+}
+
+.recuitment_information .recuitment_imfo_txt img {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.entaier_tb {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.entaier_tb .entaier_name {
+  border-bottom: solid 2px white;
+}
+
+.entaier_tb .entaier_name:last-child {
+  border-bottom: none;
+}
+
+.entaier_tb .name {
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #fc0404;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.entaier_tb .name:after {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: calc(50% - 10px);
+  right: -10px;
+  border-left: 10px solid #fc0404;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.entaier_tb .setumei {
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+.fotter_link {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fotter_link ul {
+  width: 100%;
+}
+
+.fotter_link ul li {
+  list-style: none;
+  width: 30%;
+  display: block;
+  margin: 15px auto;
+}
+
+.fotter_link li h3 {
+  width: 100%;
+}
+
+.fotter_link li h3 img {
+  display: block;
+}
+
+.fotter_link li a {
+  text-decoration: none;
+  color: #333;
+  margin-right: auto;
+  margin-left: auto;
+}
